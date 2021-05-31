@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "packetdump",
+  "version": "${version}",
+  "name": "PacketDump",
+  "description": "Logs Packets",
+  "license": "MIT",
+  "authors": [
+    "nothub"
+  ],
+  "icon": "assets/packetdump/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "cc.neckbeard.packetdump.Main"
+    ]
+  },
+  "mixins": [
+    "packetdump.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "minecraft": "1.16.5"
+  }
+}
