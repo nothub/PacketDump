@@ -25,9 +25,12 @@ jobs:
       - name: Cache
         uses: actions/cache@v2
         with:
-          path: ~/.m2
-          key: '${{ runner.os }}-m2-${{ hashFiles(''**/pom.xml'') }}'
-          restore-keys: '${{ runner.os }}-m2'
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
       - name: Package
         run: ./gradlew build --stacktrace
