@@ -8,6 +8,10 @@
   "authors": [
     "nothub"
   ],
+  "contact": {
+    "website": "https://github.com/nothub/PacketDump",
+    "repo": "git@github.com:nothub/PacketDump.git"
+  },
   "icon": "assets/packetdump/icon.png",
   "environment": "client",
   "entrypoints": {
@@ -19,7 +23,7 @@
     "packetdump.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.7.4",
-    "minecraft": "1.16.5"
+    "fabricloader": ">=0.11.7",
+    "minecraft": "1.17.1"
   }
 }
